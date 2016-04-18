@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MoreStrap Doc's</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+	
+	<nav class="navbar navbar-dark bg-inverse">
+	  <!-- Navbar content -->
+	  <div class="nav navbar-nav">
+	    <a class="nav-item nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+	    <a class="nav-item nav-link" href="buttons.html">Buttons</a>
+	    <a class="nav-item nav-link" href="navbar.html">Navbar</a>
+	    <a class="nav-item nav-link" href="background.html">Background</a>
+	    <a class="nav-item nav-link" href="stripp.html">Stripp</a>
+	    <a class="nav-item nav-link active" href="countdown.html">Countdown</a>
+	    <a class="nav-item nav-link" href="footer.html">Footer</a>
+	    <a class="nav-item nav-link" href="cards.html">Cards</a>
+	    <a class="nav-item nav-link" href="container.html">Container</a>
+	    <a class="nav-item nav-link" href="margins.html">Margins</a>
+	    <a class="nav-item nav-link" href="paddings.html">Paddings</a>
+	    <a class="nav-item nav-link" href="blur.html">Blur</a>
+	    <a class="nav-item nav-link" href="shadow.html">Shadow</a>
+	    <a class="nav-item nav-link" href="images.html">Images</a>
+	    <a class="nav-item nav-link" href="forms.html">Forms</a>
+	    <a class="nav-item nav-link" href="grayscale.html">Grayscale</a>
+	  </div>
+	</nav>
+
+	<div class="container-fluid">
+
+		<h1>Countdown</h1>
+
+		<p>Declarative style</p>
+          <code>< div class="countdown" data-role="countdown"></ div></code>
+          <p>JavaScript style</p>
+          <code><div class="countdown" id="countdown"></div>
+
+                $(function(){
+                    $("#countdown").countdown();
+                });
+          </code>
+
+		<div class="bd-example" data-example-id="">
+		<!--countdown-->
+          <p>In this example I used of stripp colors:</p>
+          <p><code>data-background-color="bg-darkCrimson"</code></p>
+            
+          <div class="countdown m-t-2" data-role="countdown" data-days="2" data-background-color="bg-darkCrimson"></div>
+            <!--end countdown-->
+		</div>
+
+		<div class="highlight">
+               <div class="row">
+                     <div class="col-md-9 col-md-push-1">
+                         <h2>Options</h2>
+                         <table class="table bordered border">
+                             <thead>
+                             <tr>
+                                 <td>Parameter</td>
+                                 <td>Data-*</td>
+                                 <td>Type</td>
+                                 <td>Default value</td>
+                                 <td>Description</td>
+                             </tr>
+                             </thead>
+                             <tbody>
+                             <tr>
+                                 <td>stop</td>
+                                 <td style="white-space: nowrap">data-stop</td>
+                                 <td>stringify date</td>
+                                 <td>false (current datetime)</td>
+                                 <td>Stop time</td>
+                             </tr>
+                             <tr>
+                                 <td>days</td>
+                                 <td style="white-space: nowrap">data-days</td>
+                                 <td>int</td>
+                                 <td>false</td>
+                                 <td>Days to stop</td>
+                             </tr>
+                             <tr>
+                                 <td>hours</td>
+                                 <td style="white-space: nowrap">data-hours</td>
+                                 <td>int</td>
+                                 <td>false</td>
+                                 <td>Hours to stop</td>
+                             </tr>
+                             <tr>
+                                 <td>minutes</td>
+                                 <td style="white-space: nowrap">data-minutes</td>
+                                 <td>int</td>
+                                 <td>false</td>
+                                 <td>Minutes to stop</td>
+                             </tr>
+                             <tr>
+                                 <td>seconds</td>
+                                 <td style="white-space: nowrap">data-seconds</td>
+                                 <td>int</td>
+                                 <td>false</td>
+                                 <td>Seconds to stop</td>
+                             </tr>
+                             <tr>
+                                 <td>backgroundColor</td>
+                                 <td style="white-space: nowrap">data-background-color</td>
+                                 <td>string</td>
+                                 <td>bg-cyan</td>
+                                 <td>Digit background. Color or class</td>
+                             </tr>
+                             <tr>
+                                 <td>digitColor</td>
+                                 <td style="white-space: nowrap">data-digit-color</td>
+                                 <td>string</td>
+                                 <td>fg-white</td>
+                                 <td>Digit color. Color or class</td>
+                             </tr>
+                             <tr>
+                                 <td>dividerColor</td>
+                                 <td style="white-space: nowrap">data-divider-color</td>
+                                 <td>string</td>
+                                 <td>fg-dark</td>
+                                 <td>Divider color. Color or class</td>
+                             </tr>
+                             <tr>
+                                 <td>labelColor</td>
+                                 <td style="white-space: nowrap">data-label-color</td>
+                                 <td>string</td>
+                                 <td>fg-grayLight</td>
+                                 <td>Labels color. Color or class</td>
+                             </tr>
+                             <tr>
+                                 <td>labels</td>
+                                 <td style="white-space: nowrap">data-labels</td>
+                                 <td>object</td>
+                                 <td>{'days': 'days', 'hours': 'hours', 'minutes': 'minutes', 'seconds': 'seconds'}</td>
+                                 <td>Label values</td>
+                             </tr>
+                             </tbody>
+                         </table>
+                     </div>
+                     
+                     <div class="col-md-9 col-md-push-1">
+                         <h2>Events</h2>
+                         <table class="table bordered border">
+                             <thead>
+                             <tr>
+                                 <td>Event</td>
+                                 <td>Data-*</td>
+                                 <td>Params</td>
+                                 <td>Description</td>
+                             </tr>
+                             </thead>
+                             <tbody>
+                             <tr>
+                                 <td>onTick</td>
+                                 <td style="white-space: nowrap">data-on-tick</td>
+                                 <td>(d, h, m, s)</td>
+                                 <td>The event fired when the countdown ticked</td>
+                             </tr>
+                             <tr>
+                                 <td>onStop</td>
+                                 <td style="white-space: nowrap">data-on-stop</td>
+                                 <td></td>
+                                 <td>The event fired when the countdown stopped</td>
+                             </tr>
+                             </tbody>
+                         </table>
+                     </div>
+                 </div>        
+          </div>
+
+
+	</div>
+
+
+<footer>
+		<div class="row area">		
+		    <div class="col-md-6">
+		        <h4>Leads</h4>
+		        <ul class="fa-ul">
+		            <li><i class="fa fa-info-circle"></i> <a href="assets/references.html">References</a></li>
+		            <li><i class="fa fa-envelope"></i> <a href="Mailto:robertnicjoo@outlook.com">Contact Me</a></li>
+		        </ul>
+		    </div>
+
+		    <div class="col-md-6">
+		        <h4>Buy me <i class="fa fa-coffee"></i></h4>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="M2A9CB6QCDBV8">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+
+        <script id='fb55s49'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//button.flattr.com/view/?fid=1y92r3&button=compact&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fb55s49');</script>
+		        
+		    </div>
+		</div><!--end row-->
+
+		<div class="footer-copyright">
+		    <div class="row">
+		        <div class="col-md-6">
+		            Copyright &copy; 2016.
+		        </div>
+		     	<div class="col-md-6 col-md-push-2">
+		           	<a href="http://morestrap.cf">Morestrap</a> is made with <i class="fa fa-heart text-red"></i> in Depok,Indonesia.
+		        </div>
+		    </div>
+		</div>
+	</footer>
+	
+</body>
+<script src="../js/jquery.js"></script>
+<script src="../js/tether.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/countdown.js"></script>
+<script type="text/javascript">
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
